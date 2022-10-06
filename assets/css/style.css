@@ -1,0 +1,212 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    border-bottom: 1px solid #CCC;
+}
+
+/* content */
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* content description */
+.content__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px 0;
+}
+
+.content__description h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.content__description p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* content portfolio */
+.content__portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    width: 50vw;
+    align-self: center;
+}
+
+.content__portfolio__item {
+    background-color: #CCC;
+    width: 200px;
+    height: 200px;
+    margin: 20px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.content__portfolio__item:hover {
+    transform: scale(1.05);
+}
+
+/* content contato */
+.content__contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px 0;
+}
+
+.content__contato h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.content__contato p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.content__contato .content__contato__whatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content__contato .content__contato__whatsapp p {
+    font-family: 'Inter', sans-serif;
+    color: #FFF;
+    font-size: 1rem;
+    background-color: #34af23;
+    margin: 10px;
+    padding: 15px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.content__contato .content__contato__whatsapp p:hover,
+.content__contato .content__contato__whatsapp p:focus {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.content__contato .content__contato__whatsapp p a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 10px;
+    border-top: 1px solid #CCC;
+}
+
+.footer p {
+    font-family: 'Inter', sans-serif;
+}
+
+.footer p a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: all ease 0.3s;
+}
+
+.footer p a:hover,
+.footer p a:focus {
+    opacity: 0.8;
+}
+
+/* media querys */
+@media (max-width: 1670px) {
+    .content__portfolio {
+        width: 58vw;
+    }
+}
+
+@media (max-width: 1400px) {
+    .content__portfolio {
+        width: 72vw;
+    }
+}
+
+@media (max-width: 1140px) {
+    .content__portfolio {
+        width: 86vw;
+    }
+}
+
+@media (max-width: 960px) {
+    .content__portfolio {
+        width: 86vw;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .content__description p {
+        text-align: center;
+    }
+
+    .content__portfolio {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content__portfolio .content__portfolio__item {
+        width: 300px;
+        height: 300px;
+    }
+
+    .content__contato p {
+        text-align: center;
+    }
+
+    .content__contato .content__contato__whatsapp {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer p:nth-child(2) {
+        display: none;
+    }
+}
